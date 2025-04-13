@@ -1,0 +1,229 @@
+/* General Styles for Larger Screens */
+.visa-graphic-container {
+    margin: auto;
+    /* padding-top: 50%; */
+    /* padding-top: 20px; */
+    width: 100%;
+    height: fit-content;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    justify-content: center;
+    position: relative;
+}
+
+.visa-to-text {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 75px;
+    position: relative;
+    font-size: 3.5rem;
+    margin-top: 30px;
+    color: white;
+
+}
+
+.vietnam-text-container {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+
+}
+
+.vietnam-text {
+    position: relative;
+    font-size: 6rem;
+    color: lime;
+}
+
+.vietnam-text-front {
+    display: block;
+    /* font-family: sans-serif; */
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    width: fit-content;
+    z-index: 2;
+    transform: translate(-7px, 0px);
+    top: 0;
+}
+
+.vietnam-text-back {
+    display: block;
+    width: fit-content;
+    /* font-family: sans-serif; */
+    font-weight: bold;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: white;
+}
+
+.qnt-box {
+    background-image: linear-gradient(285deg, rgb(248, 229, 229), rgb(255, 222, 89));
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.qnt-text {
+    position: relative;
+    font-size: 70px;
+    font-weight: 700;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(75, 230, 46);
+    font-family: Montserrat, sans-serif;
+    padding: 5px 10px;
+    padding-right: 60px;
+}
+
+.qnt-text-front {
+    width: fit-content;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.qnt-text-back {
+    width: fit-content;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    transform: translate(5px, 0px);
+    color: #c9e265;
+}
+
+.ticket-image {
+    position: absolute;
+    width: 150px;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.flight-path-image {
+    position: absolute;
+    top: 75%;
+    right: -60px;
+    transform: translateY(-50%);
+    width: 220px;
+}
+
+.plane-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 55;
+    animation: planeFlight 3s;
+}
+@keyframes planeFlight {
+    0%{
+        transform: translateX(-100vw);
+        opacity: 0.5;
+    };
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.cloud-image {
+    width: 100%;
+    scale: 0.7;
+    animation: horizontal-sway 10s infinite alternate ease-in-out;
+}
+
+@keyframes horizontal-sway {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-15px);
+    }
+
+    75% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.planeContainer {
+    position: absolute;
+    left: 0;
+    width: 45%;
+    height: fit-content;
+    top: 0;
+}
+
+.visa-graphic-container.mobile {
+    transform: translateY(10%);
+    max-width: 330px;
+    margin-top: 50px;
+}
+
+.visa-graphic-container.mobile .visa-to-text {
+    font-size: 40px;
+    margin-top: 10px;
+    padding-right: 30px;
+    transform: translateY(15px);
+}
+
+.visa-graphic-container.mobile .vietnam-text-container {
+    height: 80px;
+}
+
+.visa-graphic-container.mobile .vietnam-text {
+    font-size: 60px;
+}
+
+.visa-graphic-container.mobile .vietnam-text .vietnam-text-front{
+    transform: translateX(-5px);
+
+}
+
+.visa-graphic-container.mobile .qnt-box {
+    margin-top: 0;
+}
+
+.visa-graphic-container.mobile .qnt-text {
+    font-size: 40px;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+
+}
+
+.visa-graphic-container.mobile .ticket-image {
+    width: 90px;
+}
+
+.visa-graphic-container.mobile .flight-path-image {
+    width: 100px;
+    top: 45px;
+    right: -30px;
+}
+
+ .planeContainer.mobile {
+    width: 50%;
+    top: 0;
+    left: 0;
+}

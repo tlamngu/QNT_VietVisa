@@ -1,0 +1,40 @@
+.BannerBg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.BannerBg .BackgroundImg{
+    width: 100%;
+    height: 100%;
+}
+.BackgroundImg img{
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+.BackgroundImg.mobile img{
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.BannerBg .BackgroundOverlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(255, 22, 22, 0.7), #ff5135);
+    z-index: 1;
+    padding: 1rem;
+
+}
+
+.CurveBanner{
+    user-select: none;
+    width: 100%;
+    height: 50px;
+    transform: rotateX(180deg);
+    transform: rotateZ(180deg);
+}
