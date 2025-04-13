@@ -5,6 +5,10 @@ footer {
 footer .FooterCurve {
     width: 100%;
     height: 4rem;
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
     transform: translateY(5px);
 }
 footer .main {
@@ -16,6 +20,9 @@ footer .main .overlay {
     position: absolute;
     background-image: url("/Kangaroo.jpg");
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -26,11 +33,26 @@ footer .content {
     padding-left: 15%;
     padding-right: 15%;
     /* background-color: rgb(217, 48, 36); */
+    background: -webkit-linear-gradient(#ff5135, rgba(217, 48, 36, 0.8));
+    background: -moz-linear-gradient(#ff5135, rgba(217, 48, 36, 0.8));
+    background: -o-linear-gradient(#ff5135, rgba(217, 48, 36, 0.8));
     background: linear-gradient(#ff5135, rgba(217, 48, 36, 0.8));
 }
 .Company {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
     justify-content: flex-start;
     height: 90px;
     color: white;
@@ -43,7 +65,9 @@ footer .content {
 }
 .FooterGrid {
     width: 100%;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr auto;
     grid-template-columns: 1fr auto;
 }
 .content hr {
@@ -68,14 +92,41 @@ footer .content {
     padding: 0;
 }
 .FooterGrid .right {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
-    justify-content: end;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
 }
 .left ul li {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
     justify-content: flex-start;
+    gap: 15px;
+    -webkit-gap: 15px; /* Safari */
+    -moz-gap: 15px;
     gap: 15px;
     margin-top: 10px;
 }
@@ -88,7 +139,6 @@ footer .content {
     text-decoration: none;
 }
 
-/* Mobile adjustments */
 @media screen and (max-width: 1200px) {
     footer .content {
         padding-left: 5%;
@@ -102,22 +152,60 @@ footer .content {
     }
 
     .FooterGrid {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
     .FooterGrid .left{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-flow: column;
+        -webkit-flex-flow: column;
         flex-flow: column;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
         align-items: center;
     }
     .left li:has(a img){
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-box-pack: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+        -webkit-justify-content: center;
+                justify-content: center;
     }
     .FooterGrid .right {
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
         justify-content: center;
     }
 
     .left ul li {
+        width: 100%;
         gap: 15px;
+        -webkit-gap: 15px;
+        -moz-gap: 15px;
+        gap: 15px;
+        font-size: 0.8rem;
+        /* text-wrap: wrap; No standard prefixes needed currently */
+        word-wrap: break-word; /* Older alternative */
+        overflow-wrap: break-word; /* Standard alternative */
+    }
+    .right iframe{
+        width: 100% !important;
     }
 }

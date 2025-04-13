@@ -54,7 +54,7 @@ fetch(`${API}?name=${data.name}&email=${data.email}&phone=${data.phone}&country=
         width: isMobile ? "90%" : globalWidth < 1200 ? "80%" : "",
       }}
     >
-      <div className="centeredImageForm">
+      <div className={`centeredImageForm ${(isMobile ? "mobile": "")}`}>
         <img src="/OperaHouseCity.png" alt="Opera House City" />
       </div>
       <div className="centeredForm">
