@@ -62,7 +62,6 @@ body {
 }
 .ServiceCard {
   position: relative;
-  display: none;
 }
 
 .ServiceCard.left {
@@ -162,6 +161,7 @@ body {
   gap: 20px;
   grid-gap: 20px;
   margin-bottom: 70px;
+  overflow: hidden;
 }
 
 .ServiceGrid.mobile {
