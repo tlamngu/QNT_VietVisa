@@ -690,3 +690,30 @@ select {
               transform: rotate(0);
   }
 }
+
+.ReactModal__Content {
+  width: 400px;
+  max-width: 90%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  margin: auto;
+  height: fit-content;
+  z-index: 10000;
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .ReactModal__Content {
+    width: 80%;
+    font-size: 14px;
+    padding: 15px;
+    margin: auto;
+  }
+
+  .modal-close-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
