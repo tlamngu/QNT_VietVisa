@@ -162,6 +162,7 @@ body {
   grid-gap: 20px;
   margin-bottom: 70px;
   overflow: hidden;
+  overflow-y: visible;
 }
 
 .ServiceGrid.mobile {
