@@ -36,7 +36,7 @@ function Form() {
   };
 
   const postData = (data) => {
-    const API = `https://script.google.com/macros/s/AKfycbyQFA1rAlIRWl0b-J-hj6WZmWABe6D5xxKoWxWmOVfdp_97tHgr-JhqoGgzxqBffEOH/exec`;
+    const API = `https://script.google.com/macros/s/AKfycbwt-BRrmtgtxBEZ9b_KtsglXmGs5Ij5-qnh7Ss5Em_8zGoaPGxWxaJL29s2TwLpRKhrhw/exec`;
 
     fetch(`${API}?name=${data.name}&email=${data.email}&phone=${data.phone}&country=${data.country}&service=${data.service}&ip=${data.ip}&durl=${encodeURIComponent(data.url)}`, {
       method: "GET",
